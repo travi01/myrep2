@@ -29,7 +29,7 @@ jobs:
         env:
           REPO: self
           BRANCH: builds
-          FOLDER: src/build
+          FOLDER: build
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
 
