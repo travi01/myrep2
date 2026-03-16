@@ -43,11 +43,11 @@ jobs:
           cp ExampleProvider/build/ExampleProvider.cs3 $GITHUB_WORKSPACE/builds || cp build/*.cs3 $GITHUB_WORKSPACE/builds/
           cp build/plugins.json $GITHUB_WORKSPACE/builds
 
-      - name: Push builds
-        run: |
-          cd $GITHUB_WORKSPACE/builds
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add .
-          git commit --amend -m "Build $GITHUB_SHA" || exit 0   # do not error if nothing to commit
-          git push --force
+      - name: Push to builds branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: builds
+          folder: builds
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Build: ({sha}) {msg}"
