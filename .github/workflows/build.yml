@@ -48,6 +48,6 @@ jobs:
         env:
           REPO: self
           BRANCH: builds
-          folder: builds
+          FOLDER: builds
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
