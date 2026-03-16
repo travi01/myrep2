@@ -50,4 +50,5 @@ jobs:
           BRANCH: builds
           FOLDER: builds
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE_MODIFY: true
           MESSAGE: "Build: ({sha}) {msg}"
