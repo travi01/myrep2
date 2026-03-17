@@ -1,0 +1,8 @@
+{
+  "name": "Myrep2 Travi",
+  "description": "Koleksi Situs Pilihan Travi",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/travi01/myrep2/builds/plugins.json"
+  ]
+}
