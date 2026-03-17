@@ -38,9 +38,8 @@ subprojects {
 
     cloudstream {
         // when running through github workflow, GITHUB_REPOSITORY should contain current repository name
-        setRepo(System.getenv("GITHUB_REPOSITORY") ?: "travi01/myrep2")
-        repoName = "Myrep2 Travi"
-        description = "koleksi"
+        setRepo(System.getenv("GITHUB_REPOSITORY") ?: "user/repo")
+        
     }
 
     android {
